@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asharfi AI is your smart assistant for learning, ideas and everyday questions.">
+  <title>Asharfi AI - Your Smart Assistant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #090d1b;
+      color: white;
+    }
+    header {
+      padding: 22px;
+      font-size: 23px;
+      font-weight: bold;
+      border-bottom: 1px solid #252d46;
+    }
+    header span, h1 span { color: #8c9bff; }
+    main {
+      max-width: 650px;
+      margin: 65px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 { font-size: 42px; }
+    p { color: #b9c3dc; line-height: 1.7; }
+    .chat {
+      margin-top: 32px;
+      padding: 20px;
+      background: #151c30;
+      border: 1px solid #303b59;
+      border-radius: 18px;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #465477;
+      background: #090d1b;
+      color: white;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 10px;
+      background: #8c9bff;
+      color: #090d1b;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #answer { overflow-wrap: anywhere; }
+    footer { text-align: center; padding: 20px; color: #8c96b1; }
+    @media (max-width: 480px) {
+      main { margin: 35px auto; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <header>✦ Asharfi <span>AI</span></header>
+  <main>
+    <h1>Your ideas, <span>made smarter.</span></h1>
+    <p>Your AI assistant for learning, creativity and everyday questions.</p>
+    <section class="chat">
+      <strong>Chat with Asharfi AI</strong>
+      <p id="answer">Hello! Welcome to Asharfi AI. The demo is ready.</p>
+      <input id="question" placeholder="Ask me anything..." />
+      <button onclick="ask()">Send message →</button>
+      <p style="font-size:12px">Demo version — real AI is not connected yet.</p>
+    </section>
+  </main>
+  <footer>© 2026 Asharfi AI</footer>
+  <script>
+    function ask() {
+      const q = document.getElementById('question').value.trim();
+      const answer = document.getElementById('answer');
+      if (!q) {
+        answer.textContent = 'Please type your question first.';
+        return;
+      }
+      answer.textContent = 'This is a demo. Real AI will be connected in a later step. Your question: ' + q;
+    }
+  </script>
+</body>
+  </html>
+  
